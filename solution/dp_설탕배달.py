@@ -11,18 +11,22 @@ n = int(input())
 # 5kg 의 봉지를 최대한 사용하고, 
 # 나머지를 3kg 의 봉지로 포장할 수 있는 경우가 최소 봉지의 갯수이다.
 bag_5, bag_3 = 0, 0
-
-while n != 0:
+cnt = 0
+while n > 0:
     if n % 5 == 0:
-        bag_5 = n//6
-        rest = n - (bag_5*5)
+        bag_5 = n//5
+        n = n - (bag_5*5)
+        rslt = bag_5 + bag_3
 
-        if rest % 3 != 0:
-            n = n-3
-        
-        else :
-            bag_3 = rest // 3
+
+    else :
+        n = n-3
+        if n < 0:
+            rslt = -1
             break
-    
-rslt = bag_5 + bag_3
+        cnt += 1
+        bag_3 = cnt
+        rslt = bag_5 + bag_3
+
+# rslt = bag_5 + bag_3
 print(rslt)
