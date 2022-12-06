@@ -1,3 +1,6 @@
+import sys
+sys.stdin = open("/Users/seokhwan/Library/CloudStorage/OneDrive-개인/sh/03. code_test/code_practice/input_data/DP_가장 큰 정사각형.txt", 'r')
+
 n, m = map(int, input().split())
 
 
@@ -25,6 +28,8 @@ for i in range(n):
             # 최대값 rslt가 갱신된다고 가정한 점화식이다.
         else :
             dp[i][j] = min(dp[i-1][j-1], dp[i][j-1], dp[i-1][j]) + 1
+        
+        breakpoint()
         rslt = max(rslt, dp[i][j])
 
 print(rslt*rslt)    

@@ -1,4 +1,9 @@
+import sys
+sys.stdin = open("../input_data/bfs_바이러스.txt", 'r')
+#이 아래쪽에 maps 변수 선언
+
 n = int(input())
+
 input_list = list(map(int, input().split()))
 
 d = [0]*n

@@ -6,7 +6,7 @@
 # 상근이가 설탕을 정확하게 N킬로그램 배달해야 할 때, 봉지 몇 개를 가져가면 되는지 그 수를 구하는 프로그램을 작성하시오.
 
 # N을 입력 받는다.
-n = int(input())
+n = 10
 
 # 5kg 의 봉지를 최대한 사용하고, 
 # 나머지를 3kg 의 봉지로 포장할 수 있는 경우가 최소 봉지의 갯수이다.
@@ -18,8 +18,7 @@ while n > 0:
         n = n - (bag_5*5)
         rslt = bag_5 + bag_3
 
-
-    else :
+    else:
         n = n-3
         if n < 0:
             rslt = -1
@@ -27,6 +26,8 @@ while n > 0:
         cnt += 1
         bag_3 = cnt
         rslt = bag_5 + bag_3
+
+    breakpoint()
 
 # rslt = bag_5 + bag_3
 print(rslt)
