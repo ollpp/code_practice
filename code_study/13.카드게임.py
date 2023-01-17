@@ -6,7 +6,7 @@ sys.stdin = open('../input_data/13.카드게임.txt', 'r')
 
 n = int(sys.stdin.readline())
 
-card = deque()
+card = deque()dfdf
 
 for i in range(n):
     card.append(6-i)
