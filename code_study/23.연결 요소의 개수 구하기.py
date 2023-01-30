@@ -16,7 +16,7 @@ n, m = map(int, sys.stdin.readline().split())
 node_list = [[] for _ in range(n)]
 
 for i in range(m):
-    s, e = map(int, sys.stdin.readline().split())
+    s, e = map(int, sys.stdin.readline().split()) 
     node_list[s-1].append(e-1)
 
 chk_list = [False] * n
