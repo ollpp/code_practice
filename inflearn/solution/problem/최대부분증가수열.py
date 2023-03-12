@@ -4,6 +4,11 @@ sys.stdin = open('../data/최대부분증가수열.txt', 'r')
 
 n = int(sys.stdin.readline())
 
+'''
+l_list : idx 별 최고 갯수
+res : l_list 에서 가장 큰 수
+'''
+
 real_list = list(map(int, sys.stdin.readline().split()))
 real_list.insert(0, 0)
 l_list = [0]*(n+1)

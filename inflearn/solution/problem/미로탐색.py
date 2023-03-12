@@ -22,7 +22,6 @@ def DFS(x, y):
     if x==6 and y==6:
         cnt+=1
 
-
     for i in range(4):
         
         after_x = x+dx[i]
